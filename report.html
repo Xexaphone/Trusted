@@ -144,7 +144,7 @@
     <p>If a domain is actively flagged on global security threat feeds (such as Quad9 DNS blocklists), the algorithm automatically applies a strict safety cap, limiting the total score to a maximum of 2/10 and issuing an immediate warning banner.</p>
 
     <div class="section-title">Privacy & Zero-Key Architecture</div>
-    <p>All checks are performed client-side using direct, free public registries (RDAP, Google DNS, Tranco, Wayback Machine). No user browsing history is tracked, logged, or sent to external servers.</p>
+    <p>All checks run in your browser using free public services (RDAP registries, Wayback Machine, Tranco, Quad9, Google DNS, and ipapi.co). When you open the popup, the current site's domain is sent to these services to calculate the score. The extension has no server of its own, and nothing is tracked or logged by the developer. See <a href="https://github.com/Xexaphone/Trusted/blob/main/PRIVACY.md" target="_blank" rel="noopener" style="color: var(--accent-color);">the privacy policy</a> for details.</p>
   </div>
 </body>
 </html>
