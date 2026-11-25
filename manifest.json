@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Site Inspector - Trust & Safety",
+  "version": "1.1",
+  "description": "Assess website safety, security headers, and reputation at a glance.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "site-inspector@trustedapps",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["browsingActivity"]
+      }
+    }
+  }
+}

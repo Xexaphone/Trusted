@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Site Inspector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="domain-title" id="domain">Loading...</div>
+      <div class="protocol-badge" id="protocol">Checking...</div>
+    </header>
+
+    <div id="error-box" class="error hidden"></div>
+
+    <!-- Trust Score Dashboard Card -->
+    <div class="score-card" id="score-container">
+      <div class="score-display">
+        <span class="score-number" id="trust-score">--</span>
+        <span class="score-max">/10</span>
+      </div>
+      <div class="score-info">
+        <span class="score-label">Trust & Safety Rating</span>
+        <span class="score-desc" id="score-description">Calculating security metrics...</span>
+      </div>
+    </div>
+
+    <!-- Broadened Safety Disclaimer Notice -->
+    <div class="disclaimer-banner">
+      ⚠️ <strong>Automated estimate only.</strong> Not a guarantee of safety—always exercise caution online.
+    </div>
+
+    <!-- Trustpilot / Human Reviews Card -->
+    <div class="card trustpilot-card">
+      <span class="label">Human Reviews & Community</span>
+      <div class="trustpilot-content">
+        <span class="value" id="trustpilot-status">Check out what users think below</span>
+        <a id="trustpilot-link" href="#" target="_blank" class="btn btn-primary">Open Trustpilot Reviews</a>
+      </div>
+    </div>
+
+    <!-- Technical Metrics Cards -->
+    <div id="results" class="card-list">
+      <div class="card">
+        <span class="label">User Reputation & Global Traffic</span>
+        <span class="value" id="reputation-rank">Checking global rank...</span>
+        <span class="sub" id="threat-status">Checking threat blocklists...</span>
+      </div>
+
+      <div class="card">
+        <span class="label">Domain Age & Registration</span>
+        <span class="value" id="reg-date">Fetching...</span>
+        <span class="sub" id="domain-age"></span>
+        <span class="sub-registrar" id="registrar">Registrar: Checking...</span>
+      </div>
+
+      <div class="card">
+        <span class="label">Hosting Location & Provider</span>
+        <span class="value" id="location-info">Locating provider...</span>
+        <span class="sub" id="provider-info"></span>
+      </div>
+
+      <div class="card">
+        <span class="label">First Seen Online (Archive)</span>
+        <span class="value" id="wayback-date">Fetching...</span>
+      </div>
+
+      <div class="card">
+        <span class="label">Security Headers Summary</span>
+        <div class="headers-grid" id="headers-summary">
+          <span class="header-tag checking">HSTS</span>
+          <span class="header-tag checking">CSP</span>
+          <span class="header-tag checking">X-Frame</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buy Me a Coffee Card -->
+    <div class="card coffee-card" style="margin-top: 8px;">
+      <span class="label">Support Development</span>
+      <div class="coffee-content">
+        <span class="value">Enjoying Site Inspector? Support the project!</span>
+        <a href="https://buymeacoffee.com/trustedapps" target="_blank" class="btn btn-coffee">☕ Buy Me a Coffee</a>
+      </div>
+    </div>
+
+    <!-- Scoring Guide Footer Link -->
+    <div class="report-footer">
+      <a href="report.html" target="_blank" class="btn-report">Want to know more? View scoring guide &rarr;</a>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
